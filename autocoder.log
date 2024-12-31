@@ -1,0 +1,210 @@
+2024-12-29 21:43:38,582 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,586 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,588 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,592 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,596 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,599 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,603 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,604 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,605 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,606 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,608 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,614 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,616 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,618 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,620 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,631 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,631 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,636 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,646 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,652 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,655 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,662 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,664 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,667 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,676 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,682 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,690 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,691 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:43:38,691 - autocoder - ERROR - OpenRouter API key not found in config
+2024-12-29 21:45:18,875 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:19,448 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:20,011 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:20,695 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:21,490 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:22,010 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:22,596 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:23,388 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:23,876 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:24,460 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:25,052 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:25,601 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:26,161 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:26,719 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:27,300 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:27,892 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:28,605 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:29,149 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:29,787 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:30,391 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:30,954 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:31,607 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:32,135 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:32,672 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:33,222 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:33,816 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:45:34,356 - autocoder - ERROR - OpenRouter API error: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/credits","code":402}}
+2024-12-29 21:48:44,139 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,143 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,146 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,149 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,154 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,157 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,160 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,162 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,163 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,164 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,166 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,171 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,174 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,175 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,183 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,188 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,189 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,193 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,203 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,209 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,212 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,220 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,222 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,226 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,234 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,240 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,248 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,249 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:48:44,249 - autocoder - ERROR - Error improving code: table improvements has no column named description
+2024-12-29 21:50:05,076 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,081 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,083 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,086 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,091 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,093 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,097 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,098 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,099 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,100 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,103 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,108 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,116 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,118 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,120 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,125 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,125 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,130 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,140 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,146 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,149 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,157 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,159 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,162 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,171 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,177 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,184 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,185 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:05,186 - autocoder - ERROR - Error improving code: table improvements has no column named type
+2024-12-29 21:50:53,268 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 21:53:35,422 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 21:54:31,838 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 21:55:17,940 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 21:55:17,959 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 21:55:17,965 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 21:55:17,973 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 21:55:17,980 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 21:56:04,745 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 21:56:04,756 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 21:56:04,760 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 21:56:04,763 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 21:56:04,766 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 22:02:35,846 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 22:02:49,613 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,613 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,614 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,614 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,614 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,614 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,614 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,615 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,615 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 22:02:49,618 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,618 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,619 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,619 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,619 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,619 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,619 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,620 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,620 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 22:02:49,623 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,623 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 22:02:49,626 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 22:02:49,629 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 22:02:49,632 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,633 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,633 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 22:02:49,633 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:32:42,674 - autocoder - INFO - Removed old database: improvements.db
+2024-12-29 12:32:42,711 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:40:02,769 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:42:16,531 - autocoder - INFO - Safety check completed. Found 27 potential issues.
+2024-12-29 12:43:40,719 - autocoder - INFO - Safety check completed. Found 0 potential issues.
+2024-12-29 12:47:12,787 - autocoder - INFO - Safety check completed. Found 95 potential issues.
+2024-12-29 12:48:01,651 - autocoder - INFO - Safety check completed. Found 0 potential issues.
+2024-12-29 12:48:28,399 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:48:41,791 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:48:55,224 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:49:07,114 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:49:19,265 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:49:34,141 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:49:46,204 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:50:02,783 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:50:15,779 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:50:26,477 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:50:42,717 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:50:56,032 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:51:09,542 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:51:20,359 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:51:30,547 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:51:44,858 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:51:56,635 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:52:08,415 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:52:22,328 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:52:33,828 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:52:46,644 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:53:03,306 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:53:14,457 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:53:26,382 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:53:38,018 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:53:49,470 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 12:54:09,036 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 13:01:59,793 - autocoder - INFO - Parsed 0 improvements from AI response
+2024-12-29 13:04:29,182 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 13:07:20,658 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 13:10:26,761 - autocoder - INFO - Safety check completed. Found 0 potential issues.
+2024-12-29 13:10:48,616 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 13:11:00,219 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 13:11:10,584 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 13:11:36,610 - autocoder - INFO - Parsed 3 improvements from AI response
+2024-12-29 13:11:47,059 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 13:11:52,301 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 13:12:16,147 - autocoder - INFO - Parsed 4 improvements from AI response
+2024-12-29 13:12:40,128 - autocoder - INFO - Parsed 3 improvements from AI response
+2024-12-29 13:13:05,661 - autocoder - INFO - Parsed 4 improvements from AI response
+2024-12-29 13:13:26,237 - autocoder - INFO - Parsed 3 improvements from AI response
+2024-12-29 13:13:38,717 - autocoder - INFO - Parsed 1 improvements from AI response
+2024-12-29 13:14:06,258 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 13:14:25,956 - autocoder - INFO - Parsed 4 improvements from AI response
+2024-12-29 13:14:50,254 - autocoder - INFO - Parsed 3 improvements from AI response
+2024-12-29 13:17:39,024 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 13:27:14,672 - autocoder - INFO - Parsed 2 improvements from AI response
+2024-12-29 13:29:34,114 - autocoder - INFO - Parsed 3 improvements from AI response
+2024-12-29 13:33:23,778 - autocoder - INFO - Parsed 2 valid improvements from AI response

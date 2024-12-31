@@ -1,0 +1,2 @@
+[console_scripts]
+clari = clari.cli:main

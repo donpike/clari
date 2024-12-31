@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: auto_coder
+Version: 0.1
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: pytest
+Requires-Dist: python-dotenv
+Requires-Dist: tqdm
+Requires-Dist: tenacity
+Requires-Dist: watchdog
+Requires-Dist: gitpython
+Requires-Dist: PyYAML

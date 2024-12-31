@@ -1,0 +1,19 @@
+.env
+.DS_Store
+.vscode
+
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Virtual environment
+__pycache__
+.venv
+venv
+
+# Logs
+logs/
+
+# Config
+config/
+

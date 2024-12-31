@@ -1,0 +1,37 @@
+from pathlib import Path
+from typing import List, Dict
+from .openrouter_client import OpenRouterClient
+from .code_analyzer import CodeAnalyzer
+import logging
+import json
+
+class AutoCoder:
+
+    def __init__(self):
+        """Description of __init__ function"""
+        self.client = OpenRouterClient()
+        self.analyzer = CodeAnalyzer()
+        self.setup_logging()
+
+    def setup_logging(self):
+        """Description of setup_logging function"""
+        logging.basicConfig(filename='logs/auto_coder.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+    async def improve_code(self, file_path: Path) -> Dict:
+        """Analyzes and improves the given code file"""
+        try:
+            issues = self.analyzer.analyze_file(file_path)
+            if not issues:
+                return {'status': 'success', 'message': 'No improvements needed'}
+            with open(file_path, 'r') as file:
+                code_content = file.read()
+            prompt = self._create_improvement_prompt(code_content, issues)
+            response = await self.client.generate_code(prompt)
+            logging.info(f'Generated improvements for {file_path}')
+            return {'status': 'success', 'original_issues': issues, 'improvements': response}
+        except Exception as e:
+            logging.error(f'Error improving code: {str(e)}')
+            return {'status': 'error', 'message': str(e)}
+
+    def _create_improvement_prompt(self, code: str, issues: List[Dict]) -> str:
+        return f"\n        Please improve the following code, addressing these issues:\n        {json.dumps(issues, indent=2)}\n        \n        Here's the code:\n        ```python\n        {code}\n        ```\n        \n        Please provide:\n        1. Improved version of the code\n        2. Explanation of changes\n        3. Any additional recommendations\n        " 

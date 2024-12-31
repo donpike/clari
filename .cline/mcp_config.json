@@ -1,0 +1,9 @@
+{
+    "mcpServers": {
+        "code_improver": {
+            "command": "python",
+            "args": [".cline/server.py"],
+            "env": {}
+        }
+    }
+}

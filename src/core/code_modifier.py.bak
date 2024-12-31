@@ -1,0 +1,197 @@
+from pathlib import Path
+from typing import Dict, Any, List, Union
+import ast
+import astor
+from dataclasses import dataclass, asdict
+
+@dataclass
+class SimpleImprovement:
+    type: str
+    line: int
+    message: str
+    node_type: str
+    name: str = ''
+    function: str = ''
+    argument: str = ''
+
+class CodeModifier:
+    """Handles simple code modifications using AST for safe transformations"""
+    
+    def __init__(self):
+        self.changes: List[Dict[str, Any]] = []
+    
+    def can_handle_automatically(self, issues: List[Dict[str, Any]]) -> List[SimpleImprovement]:
+        """Determine which issues can be fixed automatically without AI.
+        
+        Args:
+            issues: List of issues from CodeAnalyzer
+            
+        Returns:
+            List of issues that can be handled automatically
+        """
+        automatic_fixes = []
+        for issue in issues:
+            if self._is_simple_fix(issue):
+                fix = self._create_simple_fix(issue)
+                if fix:
+                    automatic_fixes.append(fix)
+        return automatic_fixes
+    
+    def _is_simple_fix(self, issue: Dict[str, Any]) -> bool:
+        """Check if an issue can be fixed automatically"""
+        simple_fixes = {
+            'missing_docstring',
+            'unused_import',
+            'missing_type_hint',
+            'missing_return_type',
+            'inconsistent_return',
+            'redundant_parentheses'
+        }
+        return issue.get('type') in simple_fixes
+    
+    def _create_simple_fix(self, issue: Dict[str, Any]) -> SimpleImprovement:
+        """Create a simple fix for an issue"""
+        issue_type = issue.get('type')
+        
+        if issue_type == 'missing_docstring':
+            return SimpleImprovement(
+                type='missing_docstring',
+                line=issue['line'],
+                message=issue['message'],
+                node_type=issue['node_type'],
+                name=issue['name']
+            )
+        elif issue_type == 'missing_type_hint':
+            return SimpleImprovement(
+                type='missing_type_hint',
+                line=issue['line'],
+                message=issue['message'],
+                node_type=issue['node_type'],
+                name=issue['name']
+            )
+        # Add more simple fixes here
+        return None 
+    
+    def modify_file(self, file_path: Path, improvements: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Apply improvements to a Python file"""
+        try:
+            print(f"Attempting to modify file with {len(improvements)} improvements")
+            
+            # Read the file
+            with open(file_path, 'r', encoding='utf-8') as f:
+                source = f.read()
+            
+            # Create backup
+            backup_path = file_path.with_suffix('.py.bak')
+            print(f"Creating backup at {backup_path}")
+            with open(backup_path, 'w', encoding='utf-8') as f:
+                f.write(source)
+            
+            # Parse to AST
+            tree = ast.parse(source)
+            
+            # Apply improvements
+            modified = False
+            for improvement in improvements:
+                # Convert SimpleImprovement to dict if needed
+                imp_dict = asdict(improvement) if isinstance(improvement, SimpleImprovement) else improvement
+                print(f"Applying improvement: {imp_dict['type']}")
+                
+                if self._apply_improvement(tree, imp_dict):
+                    modified = True
+                    self.changes.append(imp_dict)
+                    print("  Success!")
+                else:
+                    print("  Failed to apply")
+            
+            if modified:
+                print("Modifications made, writing new file")
+                # Generate new source with proper formatting
+                new_source = astor.to_source(tree, pretty_source=lambda x: '    '.join(x))
+                
+                # Add required imports without extra newlines
+                imports = "from typing import Any, Dict, List\nfrom pathlib import Path\n"
+                new_source = imports + new_source
+                
+                # Write new file
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_source)
+                
+                return {
+                    'status': 'success',
+                    'changes': self.changes,
+                    'backup': str(backup_path)
+                }
+            
+            print("No modifications were made")
+            return {
+                'status': 'unchanged',
+                'message': 'No improvements needed'
+            }
+            
+        except Exception as e:
+            print(f"Error during modification: {e}")
+            return {
+                'status': 'error',
+                'error': str(e)
+            } 
+    
+    def _create_docstring_fix(self, issue: Dict[str, Any]) -> str:
+        """Create a docstring based on the node type and name"""
+        node_type = issue.get('node_type')
+        name = issue.get('name', '')
+        
+        if node_type == 'FunctionDef':
+            return f'"""Function that {name.replace("_", " ")}."""'
+        elif node_type == 'ClassDef':
+            return f'"""Class that implements {name.replace("_", " ")}."""'
+        
+        return '"""Documentation needed."""'
+
+    def _create_type_hint_fix(self, issue: Dict[str, Any]) -> ast.Name:
+        """Create a type hint based on the argument name and context"""
+        function_name = issue.get('function', '').lower()
+        arg_name = issue.get('argument', '').lower()
+        
+        # Numeric operations
+        if any(op in function_name for op in ['add', 'subtract', 'multiply', 'divide']):
+            return ast.Name(id='int')
+            
+        # Common patterns
+        if any(name in arg_name for name in ['path', 'file', 'dir']):
+            return ast.Name(id='Path')
+        elif any(name in arg_name for name in ['num', 'count', 'index']):
+            return ast.Name(id='int')
+        elif any(name in arg_name for name in ['name', 'text', 'str']):
+            return ast.Name(id='str')
+        elif any(name in arg_name for name in ['list', 'items']):
+            return ast.Name(id='List')
+        elif any(name in arg_name for name in ['dict', 'map']):
+            return ast.Name(id='Dict')
+        
+        return ast.Name(id='Any')
+
+    def _apply_improvement(self, tree: ast.AST, improvement: Dict[str, Any]) -> bool:
+        """Apply a single improvement to the AST"""
+        if improvement['type'] == 'missing_docstring':
+            for node in ast.walk(tree):
+                if (isinstance(node, (ast.FunctionDef, ast.ClassDef)) and 
+                    node.lineno == improvement['line']):
+                    # Fix docstring format
+                    docstring = self._create_docstring_fix(improvement)
+                    node.body.insert(0, ast.Expr(ast.Constant(value=docstring)))
+                    return True
+                    
+        elif improvement['type'] in ['missing_type_hint', 'missing_return_type']:
+            for node in ast.walk(tree):
+                if isinstance(node, ast.FunctionDef) and node.lineno == improvement['line']:
+                    if improvement['type'] == 'missing_type_hint':
+                        for arg in node.args.args:
+                            if arg.arg == improvement.get('argument'):
+                                arg.annotation = self._create_type_hint_fix(improvement)
+                                return True
+                    else:
+                        # Add return type hint with proper spacing
+                        node.returns = self._create_type_hint_fix(improvement)
+                        return True
+        return False 

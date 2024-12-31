@@ -1,0 +1,16 @@
+{
+    "api": {
+        "provider": "openrouter",
+        "key": "YOUR_API_KEY"
+    },
+    "tools": {
+        "code_improver": {
+            "path": "src/tools/code_improver.py",
+            "class": "CodeImproverTool"
+        },
+        "cline_improver": {
+            "path": "src/tools/cline_integration.py",
+            "class": "ClineIntegration"
+        }
+    }
+} 

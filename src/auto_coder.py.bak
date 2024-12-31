@@ -1,0 +1,91 @@
+from pathlib import Path
+from typing import Dict, Any, List
+from .code_analyzer import CodeAnalyzer
+from .core.code_modifier import CodeModifier
+from .openrouter_client import OpenRouterClient
+from .config import default_config
+import json
+import logging
+
+class AutoCoder:
+    def __init__(self, config=None):
+        """Initialize AutoCoder with optional config."""
+        self.config = config or default_config
+        self.analyzer = CodeAnalyzer()
+        self.modifier = CodeModifier()
+        self.client = OpenRouterClient()
+
+    async def improve_code(self, file_path: Path) -> Dict[str, Any]:
+        try:
+            # Analyze code
+            issues = self.analyzer.analyze_file(file_path)
+            if not issues:
+                return {'status': 'success', 'message': 'No improvements needed'}
+
+            # Apply automatic improvements
+            result = self.modifier.modify_file(file_path, issues)
+            
+            if result['status'] == 'error':
+                return result
+                
+            return {
+                'status': 'success',
+                'automatic_fixes': len(issues),
+                'improvements': result.get('changes', [])
+            }
+
+        except Exception as e:
+            logging.error(f"Error improving code: {str(e)}")
+            return {'status': 'error', 'message': str(e)} 
+            # Split issues into automatic and AI-needed
+            automatic_fixes = self.modifier.can_handle_automatically(issues)
+            complex_issues = [i for i in issues if not self.modifier._is_simple_fix(i)]
+
+            improvements = []
+            
+            # Apply automatic fixes first
+            if automatic_fixes:
+                auto_result = self.modifier.modify_file(file_path, automatic_fixes)
+                if auto_result['status'] == 'success':
+                    improvements.extend(auto_result['changes'])
+                    logging.info(f'Applied {len(auto_result["changes"])} automatic improvements to {file_path}')
+
+            # Use AI for complex issues
+            if complex_issues:
+                with open(file_path, 'r') as file:
+                    code_content = file.read()
+                prompt = self._create_improvement_prompt(code_content, complex_issues)
+                ai_response = await self.client.generate_code(prompt)
+                improvements.append({
+                    'type': 'ai_suggestion',
+                    'changes': ai_response
+                })
+                logging.info(f'Generated AI improvements for {file_path}')
+
+            return {
+                'status': 'success',
+                'automatic_fixes': len(automatic_fixes),
+                'complex_issues': len(complex_issues),
+                'improvements': improvements
+            }
+
+        except Exception as e:
+            logging.error(f'Error improving code: {str(e)}')
+            return {'status': 'error', 'message': str(e)}
+
+    def _create_improvement_prompt(self, code: str, issues: List[Dict]) -> str:
+        """Description of _create_improvement_prompt function"""
+        return f"\n        Please improve the following code, addressing these issues:\n        {json.dumps(issues, indent=2)}\n        \n        Here's the code:\n        ```python\n        {code}\n        ```\n        \n        Please provide:\n        1. Improved version of the code\n        2. Explanation of changes\n        3. Any additional recommendations\n        " 
+
+    def should_use_ai(self, issue: Dict[str, Any]) -> bool:
+        """Determine if an issue should be handled by AI based on config"""
+        if issue['type'] not in self.config.ai_improvements:
+            return False
+        
+        # Check cost threshold if available
+        estimated_cost = self.client.estimate_cost(issue)
+        if estimated_cost > self.config.cost_threshold:
+            logging.warning(f"Skipping AI improvement due to cost: ${estimated_cost:.4f}")
+            return False
+        
+        return True 

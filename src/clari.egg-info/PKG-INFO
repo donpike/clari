@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: clari
+Version: 0.1.0
+Summary: An AI-powered code improvement tool
+Home-page: https://github.com/yourusername/clari
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: rich>=10.0.0
+Requires-Dist: click>=8.0.0
+Provides-Extra: quality
+Requires-Dist: mypy>=1.0.0; extra == "quality"
+Requires-Dist: pylint>=2.17.0; extra == "quality"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+
+# Clari
+
+An AI-powered code improvement tool that helps analyze and enhance Python code.
+
+## Installation
+
+# Basic installation (just the core features):
+pip install .
+
+# For code quality features (recommended for most users):
+pip install .[quality]
+# This adds:
+# - mypy (type checking)
+# - pylint (code quality analysis)
+
+# For development (if you want to contribute or modify the tool):
+pip install .[dev]
+# This adds:
+# - pytest (testing)
+# - black (code formatting)
+# - isort (import sorting)
+# - flake8 (linting)]
+
+## Features
+
+- Code analysis and improvement suggestions
+- Pattern detection and learning
+- Safety checks and backups
+- Interactive CLI interface
+- Project-wide improvements
+
+## Usage
+
+bash
+Analyze a single file
+clari improve file.py
+Analyze a project
+clari improve-project ./my_project
+Interactive mode
+clari interactive
+
+
+## Optional Features
+
+- Type checking (requires mypy)
+- Code quality analysis (requires pylint)
+- Development tools (black, isort, flake8)
+
+## License
+
+MIT
